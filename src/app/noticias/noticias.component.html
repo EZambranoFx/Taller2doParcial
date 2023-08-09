@@ -1,0 +1,16 @@
+<div class="noticias-container">
+    <mat-card *ngFor="let noticia of data" class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{ noticia.title }}</mat-card-title>
+        <mat-card-subtitle>{{ noticia.source_name }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="noticia.url_to_image" alt="Imagen de la noticia">
+      <mat-card-content>
+        <p>{{ noticia.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
